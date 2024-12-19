@@ -1,0 +1,161 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap");
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Playfair", serif;
+}
+
+body {
+  background-color: #bbc6fa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.quote-box {
+  background-color: #fff;
+  width: 700px;
+  padding: 40px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 10px 20px 0px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+}
+
+.quote-box h2 {
+  font-size: 40px;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.quote-box h2::after {
+  content: "";
+  width: 80px;
+  height: 3px;
+  background-color: rgb(23, 124, 229);
+  border-radius: 3px;
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.quote-box blockquote {
+  font-size: 26px;
+  min-height: 110px;
+}
+
+.quote-box blockquote::before,
+.quote-box blockquote::after {
+  content: '"';
+}
+
+.quote-box span {
+  align-self: flex-end;
+  margin-top: 10px;
+  position: relative;
+}
+
+.quote-box span::before {
+  content: "";
+  width: 20px;
+  height: 2px;
+  background-color: rgb(23, 124, 229);
+  position: absolute;
+  top: 50%;
+  left: -30px;
+}
+
+.quote-box div {
+  width: 100%;
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.quote-box button {
+  background-color: rgb(23, 124, 229);
+  color: white;
+  border-radius: 25px;
+  border: 1px solid rgb(23, 124, 229);
+  width: 140px;
+  height: 40px;
+  margin: 5px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease-in-out;
+}
+
+.quote-box button img {
+  width: 20px;
+  margin-right: 5px;
+  transition: all 0.3s ease-in-out;
+}
+
+.quote-box div button:nth-child(2) {
+  background-color: transparent;
+  color: #333;
+}
+
+.quote-box button:hover {
+  background-color: white;
+  color: rgb(23, 124, 229);
+  border-color: rgb(23, 124, 229);
+  transform: scale(1.05);
+}
+
+.quote-box div button:nth-child(2):hover {
+  background-color: rgb(23, 124, 229);
+  color: white;
+  border-color: rgb(23, 124, 229);
+  transform: scale(1.05);
+}
+
+.quote-box div button:nth-child(2):hover img {
+  filter: brightness(0) invert(1);
+}
+
+@media (max-width: 480px) {
+  .quote-box {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .quote-box h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  .quote-box blockquote {
+    font-size: 18px;
+  }
+
+  .quote-box button {
+    width: 100px;
+    height: 30px;
+    font-size: 14px;
+    width: 100%;
+    margin-bottom: 8px;
+  }
+
+  .quote-box div {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .quote-box span {
+    align-self: center;
+  }
+
+  .quote-box button img {
+    width: 10px;
+  }
+}
