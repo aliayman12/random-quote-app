@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quotes</title>
+    <link rel="shortcut icon" href="fav-icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section class="quote-box">
+      <h2>Quote of the day</h2>
+      <blockquote id="quote">
+        The only limit to our realization of tomorrow is our doubts of today.
+      </blockquote>
+      <span id="author">Franklin D. Roosevelt</span>
+      <div>
+        <button onclick="getQuote(api_url)">New Quote</button>
+        <button onclick="tweet()">
+          <img src="twitter.png" alt="Twitter Icon" /> Tweet
+        </button>
+      </div>
+    </section>
+
+    <script src="index.js"></script>
+  </body>
+</html>

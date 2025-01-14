@@ -1,0 +1,117 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: #bbc6fa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.quote-box {
+  background-color: #f0f8f5;
+  display: flex;
+  flex-direction: column;
+  width: 700px;
+  padding: 40px;
+  text-align: center;
+  box-shadow: 0 10px 20px 0px rgba(0, 0, 0, 0.5);
+}
+
+.quote-box h2 {
+  font-size: 40px;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.quote-box h2::after {
+  content: "";
+  width: 80px;
+  height: 2px;
+  background-color: rgb(23, 124, 229);
+  border-radius: 3px;
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.quote-box blockquote {
+  font-size: 24px;
+  min-height: 110px;
+}
+
+.quote-box blockquote::before,
+.quote-box blockquote::after {
+  content: '"';
+}
+
+.quote-box span {
+  align-self: flex-end;
+  margin-top: 10px;
+  position: relative;
+}
+
+.quote-box span::before {
+  content: "";
+  width: 20px;
+  height: 2px;
+  background-color: rgb(23, 124, 229);
+  position: absolute;
+  top: 50%;
+  left: -30px;
+}
+
+.quote-box div {
+  width: 100%;
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.quote-box button {
+  background-color: rgb(23, 124, 229);
+  color: white;
+  border-radius: 20px;
+  border: 1px solid rgb(23, 124, 229);
+  width: 130px;
+  height: 35px;
+  margin: 5px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s;
+}
+
+.quote-box button img {
+  width: 14px;
+  margin-right: 5px;
+  transition: all 0.3s;
+}
+
+.quote-box div button:nth-child(2) {
+  background-color: transparent;
+  color: black;
+  transition: all 0.5s;
+}
+
+.quote-box button:hover {
+  background-color: white;
+  color: rgb(23, 124, 229);
+}
+
+.quote-box div button:nth-child(2):hover {
+  background-color: rgb(23, 124, 229);
+  color: white;
+}
+
+.quote-box div button:nth-child(2):hover img {
+  filter: brightness(0) invert(1);
+}
